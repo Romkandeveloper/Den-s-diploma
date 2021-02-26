@@ -7,6 +7,7 @@
     max-width: 100%;
     width: 100%;
     background-color: #262626;
+    z-index: 1000;
 
     &__wrapper{
         display: flex;
@@ -56,36 +57,148 @@
 .menu{
     position: fixed;
     left: 0;
-    top: 85px; /* js header-height*/
     background-color: #fbfbfb;
     min-height: 100vh;
+    z-index: 1000;
 }
 
 .categories{
-
+  
     &__item{
+        position: relative;
         display: block;
         padding: 25px;
-        color: black;
-        vertical-align: center;
         display: flex;
         align-items: center;
+        &:hover{
+            background-color: currentColor;
+        }
+
+        &:nth-child(1){
+            color: #14b9d6;
+        }
+        &:nth-child(2){
+            color: #e76049;
+        }
+        &:nth-child(3){
+            color: #2eb398;
+        }
+        &:nth-child(4){
+            color: #90899c;
+        }
+        &:nth-child(5){
+            color: #5692b1;
+        }
+        &:nth-child(6){
+            color: #f9b704;
+        }
+        &:nth-child(7){
+            color: #e3419c;
+        }
+        &:nth-child(8){
+            color: #e76049;
+        }
+
     }
     
     &__ico{
         font-size: 20px;
     }
     &__name{
+        display: flex;
+        padding: 25px;
+        left: 50px;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        visibility: hidden;
         font-family: "Montserrat";
         font-weight: 700;
         text-transform: uppercase;
-        color: black;
-
-        margin-left: 20px;
+        background-color: red;
+        transition: transform 1s;
+    }
+    &__text{
+        margin-left: -30px;
     }
 
     &__item:hover &__ico, &__item:hover &__name{
         color: #fff;
     }
+    &__item:hover &__name{
+        visibility: visible;
+    }
 }
 
+/* main */
+
+.content{
+    display: flex;
+    padding-top: 100px;
+    padding-left: 75px;
+    &__wrapper{
+        flex: 1 1;
+    }
+}
+
+.article{
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+
+    padding: 0 10px;
+    &__wrapper{
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: #e76049;
+            height: 4px;
+        }
+    }
+    &__data{
+        padding: 15px;
+        border: 2px solid #ebebeb;
+        border-top: none;
+    }
+
+    &__info{
+        font-size: 10px;
+        font-weight: 600;
+        color: #9d9d9d;
+    }
+
+    &__img{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title{
+        color: #313131;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23px;
+
+        margin-top: 12px;
+    }
+    &__icon{
+        margin-right: 5px;
+    }
+    &__time{
+        margin-right: 15px;
+    }
+    &__text{
+        font-family: "Open Sans";
+        font-size: 12px;
+        font-weight: normal;
+        color: #626262;
+
+        margin-top: 10px;
+    }
+}
