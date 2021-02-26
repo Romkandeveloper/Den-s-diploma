@@ -1,0 +1,28 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Сбрасываем маркеры списков*/
+ol, ul {
+	list-style: none;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Устанавливаем шрифты */
+body{
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  color: #fefefe;
+}
