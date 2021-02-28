@@ -12,6 +12,7 @@
     <header class = "header">
         <div class = "container">
            <div class = "header__wrapper">
+               <div class = "menu-btn"></div>
                 <div class = "logo">
                     <img class = "logo__img" alt = "" src = "../images/logo.png">
                     <span class = "logo__title">extraordinary</span>
@@ -21,7 +22,7 @@
                         <button class = "options__btn">SHARE</button>
                     </li>
                     <li class = "options__item">
-                        <button class = "options__btn"><i class="fas fa-search"></i></button>
+                        <input class = "options__btn search" type = "text"><i class="fas fa-search"></i></input>
                     </li>
                     <li class = "options__item">
                         <button class = "options__btn"><i class="fas fa-user"></i></button>
@@ -68,19 +69,9 @@
     </aside>
     <main class = "content">
         <div class = "content__wrapper">
-            <div class = "container">
                 <section class = "article">
                     <div class = "article__wrapper">
-                        <div class = "article__top">
-                            <img class = "article__background" alt = "" src = "../images/article.png">
-                            <section class = "link">
-                                <div class = "link__wrapper">
-                                    <a href = "" class = "link__item"><i class="fas fa-times"></i></a>
-                                    <a href = "" class = "link__item"><i class="fas fa-chevron-left"></i></a>
-                                    <a href = "" class = "link__item"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                            </section>
-                        </div>
+                        <img class = "article__background" alt = "" src = "../images/article.png">
                         <main class = "article__main">
                             <section class = "article__info">
                                 <div class = "article__infoWrapper">
@@ -118,7 +109,11 @@
                                             to the boat, than hemp. Hemp is a dusky, dark fellow, a sort of Indian; but 
                                             Manilla is as a golden-haired Circassian to behold.
                                         </p>
-                                        <img class = "article__img" alt = "" src = "../images/img.png">
+                                        <div class = "article__imageBox">
+                                            <img class = "article__img" alt = "" src = "../images/img.png">
+                                            <p class = "article__imageInfo">Of late years the Manilla rope has in the American fishery almost
+                                                entirely superseded hemp as a material for whale-line</p>
+                                        </div>
                                         <p class = "article__page">The whale-line is only two-thirds of an inch in thickness. At first sight, you 
                                             would not think it so strong as it really is. By experiment its one and fifty 
                                             yarns will each suspend a weight of one hundred and twenty pounds; so 
@@ -168,9 +163,39 @@
                             </section>
                         </main>
                     </div>
+                        <section class = "link">
+                            <div class = "link__wrapper">
+                                <a href = "" class = "link__item"><i class="fas fa-times"></i></a>
+                                <a href = "" class = "link__item"><i class="fas fa-chevron-left"></i></a>
+                                <a href = "" class = "link__item"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </section>
                 </section>
-            </div>
         </div>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '127.0.0.1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
     </main>
+
+    <footer class = "footer">
+        <div class = "container">
+            <span class = "footer__info">Copyrights Mohammad shoahg. All rights researved 2021</span>
+        </div>
+    </footer>
 </body>
 </html>
