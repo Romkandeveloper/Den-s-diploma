@@ -188,7 +188,11 @@
         height: auto;
         max-height: 350px;
         object-fit: cover;
-        object-position: bottom;
+        object-position: left bottom;
+
+        @media screen and (max-width: 700px){
+            min-height: 400px;
+        }
     }
     &__main{
         width: 100%;
@@ -226,6 +230,9 @@
         @media screen and (max-width: 700px){
             font-size: 15px;
         }
+        @media screen and (max-width: 400px){
+            text-align: center;
+        }
     }
     &__textWrapper{
         color: #626262;
@@ -242,6 +249,9 @@
 
         @media screen and (max-width: 700px){
             font-size: 12px;
+        }
+        @media screen and (max-width: 400px){
+            text-align: justify;
         }
     }
     &__page{

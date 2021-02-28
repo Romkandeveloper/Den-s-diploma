@@ -213,7 +213,12 @@ body {
   height: auto;
   max-height: 350px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: left bottom;
+}
+@media screen and (max-width: 700px) {
+  .article__background {
+    min-height: 400px;
+  }
 }
 .article__main {
   width: 100%;
@@ -259,6 +264,11 @@ body {
     font-size: 15px;
   }
 }
+@media screen and (max-width: 400px) {
+  .article__subtitle {
+    text-align: center;
+  }
+}
 .article__textWrapper {
   color: #626262;
   display: flex;
@@ -276,6 +286,11 @@ body {
 @media screen and (max-width: 700px) {
   .article__text {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .article__text {
+    text-align: justify;
   }
 }
 .article__page {
