@@ -8,10 +8,10 @@
     width: 100%;
     background-color: #262626;
     z-index: 1000;
+    padding: 30px 0;
 
     &__wrapper{
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 }
@@ -21,6 +21,8 @@
 }
 
 .logo{
+    margin: 0 auto;
+
     &__title{
         text-transform: uppercase;
         font-family: "Montserrat";
@@ -30,6 +32,10 @@
     }
     &__img{
         margin-right: 20px;
+
+        @media screen and (max-width:400px){
+            display: none;
+        }
     }
 }
 
@@ -70,7 +76,7 @@
         transform: translateX(-72.5px);
     }
 
-    &__active{
+    &-active{
         transform: translateX(0);
     }
 
@@ -113,11 +119,17 @@
 }
 
 .categories{
-  
+    & a{
+        display: block;
+        padding: 25px;
+        color : inherit;
+        background-color: inherit;
+        text-decoration: none;
+    }
     &__item{
         position: relative;
         display: block;
-        padding: 25px;
+        
         display: flex;
         align-items: center;
 
@@ -159,18 +171,18 @@
         font-size: 20px;
     }
     &__name{
-        display: flex;
+        top: 0;
+        display: none;
         padding: 25px;
-        left: 50px;
+        left: 70px;
         align-items: center;
         height: 100%;
         position: absolute;
-        visibility: hidden;
         font-family: "Montserrat";
         font-weight: 700;
         text-transform: uppercase;
-        background-color: red;
-        transition: transform 1s;
+        background-color: inherit;
+        transition: .5s ease;
     }
     &__text{
         margin-left: -30px;
@@ -178,9 +190,7 @@
 
     &__item:hover &__ico, &__item:hover &__name{
         color: #fff;
-    }
-    &__item:hover &__name{
-        visibility: visible;
+        display: flex;
     }
 }
 
@@ -201,7 +211,7 @@
             order: 1;
         }
     }
-    &__active{
+    &-active{
         transform: translateX(72.5px);
     }
     @media screen and (max-width: 950px){
@@ -223,7 +233,7 @@
                 transform: scale(1.05);
             }
             .article__title{
-                text-decoration: underline;
+                text-decoration: underlinegi;
             }
         }
         &::after{

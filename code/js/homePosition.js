@@ -9,6 +9,11 @@ content.style.paddingTop = header.clientHeight + 10 + 'px'; /* размещае�
 
 let categoriesItem = document.querySelectorAll(".categories__item");
 
+let names = document.querySelectorAll(".categories__name");
+
+for(let i = 0; i < categoriesItem.length; i++){
+    names[i].style.backgroundColor = categoriesItem.color;
+}
 
 
 
