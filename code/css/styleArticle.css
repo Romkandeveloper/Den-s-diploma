@@ -29,6 +29,7 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #fefefe;
+  overflow-x: hidden;
 }
 
 .header {
